@@ -1,9 +1,9 @@
-const { Router } = require("express");
+const Router = require('express')
 const router = new Router();
-const User = require("../../models/User");
-const { registrationValidation } = require('../../validation');
-const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
+const User = require('../../models/User')
+const registrationValidation = require('../../validation')
+const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
 const authVarification = require('../../authentication/jwt')
 
 router.post("/register",async (request, response) => {    
@@ -54,4 +54,4 @@ router.get('/getuser',authVarification,async (request,response)=>{
     response.status(200).json('user was not found')
 })
 
-module.exports = router;
+module.exports =router;

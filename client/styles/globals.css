@@ -17,3 +17,25 @@ a {
 p{
   /* border:1px solid red; */
 }
+* {
+  scrollbar-width: thin;
+  scrollbar-color: blue orange;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #202442;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #303453;
+  border: 3px solid #202442
+}
+
+::selection {
+  background: rgb(43, 43, 43);
+}

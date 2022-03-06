@@ -46,11 +46,11 @@ export const LogIn = () => {
       setSignUpStatus(false)
       return
     }
-    if (!userData.checkbox) {
-      setResponse("checkbox not checked")
-      setSignUpStatus(false)
-      return
-    }
+    // if (!userData.checkbox) {
+    //   setResponse("checkbox not checked")
+    //   setSignUpStatus(false)
+    //   return
+    // }
 
     setIsLoading(true)
     try {
@@ -62,8 +62,8 @@ export const LogIn = () => {
       localStorage.setItem('auth-token',result.data.token)
       router.push(`/user/loggedin?token=${result.data.token}`)
     } catch (error) {
-      console.log(error.response.data);
-      setResponse(error.response.data)
+      console.log(error?.response?.data);
+      setResponse(error?.response?.data)
       setIsLoading(false)
       setSignUpStatus(false)
     }

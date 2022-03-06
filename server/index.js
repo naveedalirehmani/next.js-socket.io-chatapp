@@ -41,7 +41,7 @@ app.use("/api/user", Routes);
 
 app.get('/here',(request,response)=>{
   // modalMessage.collection.drop();
-  response.json('here')
+  response.json('he3re')
 })
 
 server.listen(port, function () {
